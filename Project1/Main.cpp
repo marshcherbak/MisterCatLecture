@@ -9,7 +9,6 @@ void main()
 {
 	MrCat cafe;
 	cafe.showMenu();
-
 	Dish *disches[] = { 
 		new Pizza("QuattroFormagio"),
 		new Pizza("Margarita"),
@@ -18,7 +17,6 @@ void main()
 		new Soup("CreamCheese"),
 		new Pasta("Bolognese")
 	};
-
 
 	for (auto dish : disches) {
 		cout << dish->getName() << endl;
