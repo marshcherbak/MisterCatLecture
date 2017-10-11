@@ -6,7 +6,7 @@ using namespace std;
 class Pasta : public Dish
 {
 public:
-	Pasta(string name);
+	Pasta(string name, double);
 	string getName() override;
 };
 

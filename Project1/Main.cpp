@@ -72,23 +72,23 @@ void main()
 		cin >> c;
 		switch (c) {
 		case '1':
-			newDish = new Pizza("QuadroFormagio");
+			newDish = new Pizza("QuadroFormagio", 150);
 			break;
 		case '2':
-			newDish = new Soup("Miso");
+			newDish = new Soup("Miso", 45);
 			break;
-		case '3':newDish = new Pasta("Passssta");
+		case '3':newDish = new Pasta("Passssta", 50);
 			break;
 		default:
 			break;
 		}
 		if (newDish != nullptr) {
 			newOrder += newDish;
-			cout << newDish->getName() << " added to order.\n";
+			cout << newDish->getName() << " added to order. Current cheque: " << newOrder.Price() << endl;;
 		}
 	}
-	newOrder += new Pizza("QuattroFormagio");
-	newOrder += new Soup("Miso");
+	newOrder += new Pizza("QuattroFormagio", 150);
+	newOrder += new Soup("Miso", 45);
 
 
 	cout << newOrder;

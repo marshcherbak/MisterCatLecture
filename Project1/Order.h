@@ -10,6 +10,8 @@ public:
 
 	void operator +=(Dish * item);
 	void addItem(Dish * item);
+
+	double Price();
 	Order(int tableId);
 
 	void print();

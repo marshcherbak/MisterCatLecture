@@ -3,12 +3,18 @@
 using namespace std;
 
 
-Dish::Dish(string name)
+Dish::Dish(string name, double price)
 {
 	this->name = name;
+	this->price = price;
 }
 
 string Dish::getName()
 {
 	return name;
+}
+
+double Dish::getPrice()
+{
+	return price;
 }

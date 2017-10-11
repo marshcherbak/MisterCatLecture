@@ -5,10 +5,12 @@ class Dish
 {
 
 public:
-	Dish(string name);
-	virtual string getName();
+	Dish(string, double);
+	virtual string getName()=0;
+	virtual double getPrice();
 protected:
 	int cookingTime;
 	string name;
+	double price;
 };
 
