@@ -21,6 +21,15 @@ double Order::Price()
 	return p;
 }
 
+int Order::getCookingTime()
+{
+	int maxDishTime = 0;
+	for (auto dish : dishes)
+		if (maxDishTime < dish->getCookingTime())
+			maxDishTime = dish->getCookingTime();
+	return maxDishTime;
+}
+
 Order::Order(int tableId)
 {
 	this->tableId = tableId;

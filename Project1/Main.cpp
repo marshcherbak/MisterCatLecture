@@ -8,6 +8,7 @@
 #include <thread>
 using namespace std;
 
+#pragma region Threading tests
 std::mutex itemslock;
 vector<int> items = { 1,2,3,4,5,6,6 };
 
@@ -55,6 +56,7 @@ void testsets() {
 
 	//буде чекати, поки не закінчиться цей потік 
 }
+#pragma endregion
 //============================================================
 //============================================================
 
@@ -65,7 +67,6 @@ void main()
 	cafe.showMenu();
 
 	Order newOrder(tableNum);
-
 	char c = -1;
 	while (c != '0') {
 		Dish *newDish = nullptr;
@@ -87,22 +88,9 @@ void main()
 			cout << newDish->getName() << " added to order. Current cheque: " << newOrder.Price() << endl;;
 		}
 	}
-	newOrder += new Pizza("QuattroFormagio", 150);
-	newOrder += new Soup("Miso", 45);
 
-
-	cout << newOrder;
-
-	/*Dish *dishes[] = { 
-		new Pizza("QuattroFormagio"),
-		new Pizza("Margarita"),
-		new Pizza("Havayian"),
-		new Soup("Miso"),
-		new Soup("CreamCheese"),
-		new Pasta("Bolognese")
-	};*/
-
-
-
+	cout << newOrder << endl;
+	cout << "Cooking time: " << newOrder.getCookingTime() << endl;
+	//cafe.startOrder(newOrder);
 	system("pause");
 }

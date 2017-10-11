@@ -12,6 +12,8 @@ public:
 	void addItem(Dish * item);
 
 	double Price();
+
+	int getCookingTime();
 	Order(int tableId);
 
 	void print();

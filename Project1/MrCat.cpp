@@ -16,4 +16,9 @@ void MrCat::showMenu()
 
 }
 
+int MrCat::startOrder(Order o)
+{
+	return 0;
+}
+
 

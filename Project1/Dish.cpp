@@ -18,3 +18,8 @@ double Dish::getPrice()
 {
 	return price;
 }
+
+int Dish::getCookingTime()
+{
+	return cookingTime;
+}
