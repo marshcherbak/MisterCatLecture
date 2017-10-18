@@ -119,6 +119,7 @@
     <ClCompile Include="Pasta.cpp" />
     <ClCompile Include="Pizza.cpp" />
     <ClCompile Include="Soup.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dish.h" />
